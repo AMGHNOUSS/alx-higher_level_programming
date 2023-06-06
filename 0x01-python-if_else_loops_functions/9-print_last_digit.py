@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-def uppercase(str):
-    lengh = len(str)
-    for i in range(0, lengh):
-        ch = str[i]
-        if str[i] >= 'a' and str[i] <= 'z':
-            ch = ord(ch)
-            ch = ch - 32
-            ch = chr(ch)
-        print("{}",.format(c) end="")
-    print("")
+def print_last_digit(number):
+    n = number
+    if number < 0:
+        n = -number
+    n = n % 10
+    if number > 0:
+        print("{}".format(n), end="")
+        return n
+    else:
+        print("{}".format(n), end="")
+        return n
