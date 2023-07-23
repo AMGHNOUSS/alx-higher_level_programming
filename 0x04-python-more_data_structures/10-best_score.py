@@ -3,7 +3,8 @@ def best_score(a_dictionary):
     if not a_dictionary:
         return None
     list_keys = list(a_dictionary.keys())
-    big = a_dictionary[list_keys[0]]
+    a = list_keys[0]
+    big = a_dictionary[a]
     for i in list_keys:
         if big < a_dictionary[i]:
             big = a_dictionary[i]
