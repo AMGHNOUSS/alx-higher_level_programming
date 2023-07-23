@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
     big = 0
-    if a_dictionary == None:
+    if a_dictionary is None:
         return None
     list_keys = list(a_dictionary.keys())
     for i in list_keys:
@@ -9,4 +9,3 @@ def best_score(a_dictionary):
             big = a_dictionary[i]
             big_key = i
     return big_key
-    
