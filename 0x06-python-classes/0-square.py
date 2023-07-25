@@ -3,5 +3,5 @@
 
 
 class Square():
-        """Empty class"""
-            pass
+    """Empty class"""
+    pass
