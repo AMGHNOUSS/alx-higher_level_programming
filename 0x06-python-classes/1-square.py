@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-class Square:
-    __size (int)
+""" Class Square with Attribute size"""
+
+
+class Square():
+    """Attribute size in Class Square"""
     def __init__(self, size):
-        self.size = size
+        self.__size = size
