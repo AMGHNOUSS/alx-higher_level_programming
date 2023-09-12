@@ -1,8 +1,8 @@
 #!/usr/bin/node
-function second_biggest() {
-const { argv } = require('process');
-if (argv.length === 2 || argv.length === 3) {
-  return(0);
+function second_biggest () {
+  const { argv } = require('process');
+  if (argv.length === 2 || argv.length === 3) {
+    return (0);
   }
   if (argv.length > 3) {
     const array = [];
@@ -14,4 +14,4 @@ if (argv.length === 2 || argv.length === 3) {
     return (second);
   }
 }
-if (second_biggest()) { console.log(second_biggest()); } else { console.log(0) }
+if (second_biggest()) { console.log(second_biggest()); } else { console.log(0); }
