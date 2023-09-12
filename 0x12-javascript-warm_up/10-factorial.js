@@ -1,11 +1,6 @@
 #!/usr/bin/node
-function factorial(n) {
-	if (n === NaN)
-		return (1);
-	else if (n < 2)
-		return (1);
-	else
-		return(n * factorial(n - 1));
+function factorial (n) {
+  if (n < 2) { return (1); } else { return (n * factorial(n - 1)); }
 }
 const { argv } = require('process');
 const a = parseInt(argv[2]);
