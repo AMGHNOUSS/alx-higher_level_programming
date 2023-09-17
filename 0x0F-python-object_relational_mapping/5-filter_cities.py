@@ -11,7 +11,7 @@ if __name__ == "__main__":
     )
     c = db.cursor()
     c.execute("SELECT cities.id, cities.name, states.name FROM cities, \
-        states WHERE states.id = cities.state_id and states.name = \
+        states WHERE states.id = cities.state_id AND states.name = \
         '{}';".format(sys.argv[4]))
     for state in c.fetchall():
         print(state)
