@@ -13,7 +13,7 @@ if __name__ == "__main__":
         port=3306
     )
     c = db.cursor()
-    c.execute("SELECT * FROM `states`")
+    c.execute("SELECT * FROM `states` ORDER BY `id`")
     for state in c.fetchall():
-        if state[1][0] == 'N':
+        if (state[1][0] == "N"):
             print(state)
