@@ -10,6 +10,6 @@ if __name__ == "__main__":
         port=3306
     )
     c = db.cursor()
-    c.execute("SELECT * FROM `states` where name = `{}`".format(sys.argv[3]))
+    c.execute("SELECT * FROM `states` WHERE name = `{}`".format(sys.argv[4]))
     for state in c.fetchall():
         print(state)
