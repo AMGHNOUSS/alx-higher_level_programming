@@ -10,7 +10,8 @@ if __name__ == "__main__":
         port=3306
     )
     c = db.cursor()
-    c.execute("SELECT * FROM `states` ORDER BY `id`")
+    c.execute("SELECT * FROM states WHERE CONVERT(`name` USING Latin1) \
+    COLLATE Latin1_General_CS \
+    LIKE 'N%';")
     for state in c.fetchall():
-        if (state[1][0] == "N"):
             print(state)
