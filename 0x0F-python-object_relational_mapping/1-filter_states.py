@@ -14,4 +14,4 @@ if __name__ == "__main__":
     COLLATE Latin1_General_CS \
     LIKE 'N%';")
     for state in c.fetchall():
-            print(state)
+        print(state)
