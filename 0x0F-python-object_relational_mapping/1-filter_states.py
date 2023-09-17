@@ -10,9 +10,10 @@ if __name__ == "__main__":
         user=sys.argv[1],
         passwd=sys.argv[2],
         db=sys.argv[3],
-        port = 3306
+        port=3306
     )
     c = db.cursor()
-    c.execute("SELECT * FROM `states` where name = ^N")
+    c.execute("SELECT * FROM `states`")
     for state in c.fetchall():
-        print(state)
+        if state[1][0] == 'N':
+            print(state)
