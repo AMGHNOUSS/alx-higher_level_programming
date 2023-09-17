@@ -10,8 +10,9 @@ if __name__ == "__main__":
         port=3306
     )
     c = db.cursor()
-    c.execute("""SELECT * FROM states
-                WHERE name LIKE BINARY '{}'
-                ORDER BY states.id ASC""".format(sys.argv[4]).strip("'"))
+    c.execute("SELECT * \
+            FROM states \
+            WHERE CONVERT(`name` USING Latin1) \
+            COLLATE Latin1_General_CS = '{}';".format(sys.argv[4]))
     for state in c.fetchall():
         print(state)
