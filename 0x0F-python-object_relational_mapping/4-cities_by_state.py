@@ -10,7 +10,7 @@ if __name__ == "__main__":
         port=3306
     )
     c = db.cursor()
-    c.execute("SELECT cities.id, cities.name, states.name FROM states, \
-        cities WHERE states.state.id == cities.state_id;")
+    c.execute("SELECT cities.id, cities.name, states.name FROM cities, \
+        states WHERE states.id = cities.state_id;")
     for state in c.fetchall():
         print(state)
