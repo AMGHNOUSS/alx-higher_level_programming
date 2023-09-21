@@ -10,7 +10,7 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    states = session.query(State).filter(State.name.like(sys.argv[4])).all()
+    states = session.query(State).filter(State.name == sys.argv[4]).first()
     if states:
         print("{}".format(state.id))
     else:
