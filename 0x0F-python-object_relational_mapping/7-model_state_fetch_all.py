@@ -3,14 +3,13 @@
 import sys
 from model_state import Base, State
 from sqlalchemy import create_engine
-from sqlalchemy import sessionmaker
+from sqlalchemy.orm import sessionmaker
 if __name__ == "__main__":
     db = MySQLdb.connect(
         user=sys.argv[1],
         passwd=sys.argv[2],
         db=sys.argv[3],
     )
-if __name__ == '__main__':
     engine = create_engine(
         'mysql+pymysql://{}:{}@localhost:3306/{}'.format(user, root, bb)
     )
