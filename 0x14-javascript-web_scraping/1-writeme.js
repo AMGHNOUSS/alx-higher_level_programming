@@ -1,9 +1,8 @@
 #!/usr/bin/node
 // Write a string to a File using Request
-
 const fs = require('fs');
 fs.writeFile(process.argv[2], process.argv[3], error => {
-	if (error) {
-		console.log(error);
-	}
+  if (error) {
+    console.log(error);
+  }
 });
