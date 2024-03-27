@@ -1,7 +1,8 @@
 #!/usr/bin/node
 // Print The Title of a Star Wars movie.
 const request = require('request');
-request('https://swapi-api.hbtn.io/api/films/' + process.argv[2], (error, response, body) => {
+const url = 'https://swapi-api.alx-tools.com/api/films/';
+request(url + process.argv[2], (error, response, body) => {
   if (error) {
     console.log(error);
   }
